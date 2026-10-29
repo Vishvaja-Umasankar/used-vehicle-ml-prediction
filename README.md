@@ -54,6 +54,40 @@ Compare classification models using appropriate metrics and cross-validation whe
 
 ## Results
 
+### Regression: Selling-Price Prediction
+
+A Linear Regression model was used to predict vehicle selling prices.
+
+| Metric | Result |
+|---|---:|
+| MAE | 5,084.95 |
+| RMSE | 7,495.79 |
+| R² Score | 0.7172 |
+
+The model explained approximately 71.7% of the variation in selling prices on the evaluation data.
+
+### Classification: Sale Outcome Prediction
+
+Three models were compared: Logistic Regression, Decision Tree, and SVM, including balanced versions of Logistic Regression and SVM.
+
+| Model | Accuracy | F1-score |
+|---|---:|---:|
+| Decision Tree | 71.3% | 0.536 |
+| Balanced SVM | 62.9% | 0.506 |
+| Balanced Logistic Regression | 58.7% | 0.513 |
+
+**Best overall model:** Decision Tree, based on the highest accuracy and F1-score among these final comparisons.
+
+### Class Imbalance
+
+The dataset contained 1,776 labelled vehicles: 83.05% sold on schedule and 16.95% did not. The initial SVM predicted only the majority class, highlighting why accuracy alone is insufficient. Balanced Logistic Regression achieved better recall (58.3%) for vehicles that did not sell on schedule than Decision Tree (28.3%).
+
+## Future Improvements
+
+- Improve minority-class detection using class weighting or resampling.
+- Apply stratified cross-validation to assess model consistency.
+- Explore additional models and feature engineering.
+- Evaluate performance on unseen data and investigate prediction errors.
 
 
 ## Key Learnings
@@ -64,11 +98,6 @@ Compare classification models using appropriate metrics and cross-validation whe
 - Evaluating models and comparing their performance.
 - Understanding the importance of data quality and reliable evaluation.
 
-## Future Improvements
-
-- Test additional models and compare their performance.
-- Improve feature engineering and preprocessing.
-- Further investigate model generalisation and performance on unseen data.
 
 ## Author
 
