@@ -1,4 +1,4 @@
-# used-vehicle-ml-prediction
+# Used-Vehicle-ml-prediction
 Machine learning project using Python to predict used-vehicle selling prices and classify whether vehicles sell within defined listing deadlines.
 
 # Used Vehicle Price Prediction and Sale Classification
